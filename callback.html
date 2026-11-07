@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Tesla OAuth Callback</title></head>
+<body style="font-family: sans-serif; margin: 2em;">
+<h2>Tesla sign-in complete</h2>
+<p>Copy the code below and paste it into the token script on your Mac:</p>
+<p id="code" style="font-size: 1.4em; font-weight: bold; word-break: break-all;">(no code found in this URL)</p>
+<button onclick="navigator.clipboard.writeText(document.getElementById('code').textContent)">Copy code</button>
+<p style="color:#666">You may close this tab after copying.</p>
+<script>
+  var c = new URLSearchParams(location.search).get('code');
+  if (c) document.getElementById('code').textContent = c;
+</script>
+</body>
+</html>
